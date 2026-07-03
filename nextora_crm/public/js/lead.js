@@ -38,6 +38,7 @@ frappe.ui.form.on('Lead', {
                         // Open dialog
                         let dialog = new frappe.ui.Dialog({
                             title: '📧 Send Mail',
+                            size: 'large',
                             fields: [
                                 {
                                     fieldname: 'to_emails',
