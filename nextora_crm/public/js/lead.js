@@ -51,41 +51,12 @@ frappe.ui.form.on('Lead', {
                                     fieldname: 'subject',
                                     fieldtype: 'Data',
                                     label: 'Subject',
-                                    reqd: 1,
-                                    default: `New Lead: ${frm.doc.lead_name || frm.doc.name}`
-                                },
+                                    reqd: 1                                },
                                 {
-                                    fieldname: 'message',
-                                    fieldtype: 'Text Editor',
-                                    label: 'Message',
-                                    reqd: 1,
-                                    default: `
-                                        <p>Hello,</p>
-                                        <p>A new lead has been created.</p>
-                                        <br>
-                                        <table style="border-collapse: collapse; width: 100%;">
-                                            <tr>
-                                                <td style="padding: 8px; border: 1px solid #ddd; background:#f2f2f2;"><b>Lead Name</b></td>
-                                                <td style="padding: 8px; border: 1px solid #ddd;">${frm.doc.lead_name || ''}</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 8px; border: 1px solid #ddd; background:#f2f2f2;"><b>Company</b></td>
-                                                <td style="padding: 8px; border: 1px solid #ddd;">${frm.doc.company_name || ''}</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 8px; border: 1px solid #ddd; background:#f2f2f2;"><b>Phone</b></td>
-                                                <td style="padding: 8px; border: 1px solid #ddd;">${frm.doc.phone || ''}</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 8px; border: 1px solid #ddd; background:#f2f2f2;"><b>Lead ID</b></td>
-                                                <td style="padding: 8px; border: 1px solid #ddd;">${frm.doc.name}</td>
-                                            </tr>
-                                        </table>
-                                        <br>
-                                        <p>Regards,<br>
-                                        <b>${sender_name}</b><br>
-                                        ${sender_email}</p>
-                                    `
+                                  fieldname: 'message',
+                                  fieldtype: 'Text Editor',
+                                  label: 'Message',
+                                  reqd: 1
                                 },
                                 {
                                     fieldname: 'section_attachments',
